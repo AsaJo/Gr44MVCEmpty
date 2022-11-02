@@ -8,7 +8,7 @@ namespace Gr44MVCEmpty.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public IActionResult Contact()
         {
             return View();

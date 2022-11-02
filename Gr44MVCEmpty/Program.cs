@@ -12,7 +12,7 @@ namespace Gr44MVCEmpty
 
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(20);
+                options.IdleTimeout = TimeSpan.FromMinutes(1);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
@@ -37,6 +37,7 @@ namespace Gr44MVCEmpty
             app.UseRouting();
 
             app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 //endpoints act like a if/else chain, first one that is true is the one to be used!
